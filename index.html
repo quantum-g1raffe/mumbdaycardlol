@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mum Birthday Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="scene">
+    <div class="card" onclick="flipCard()">
+
+      <!-- FRONT SIDE -->
+      <div class="card-face card-front">
+        <img src="front.png" alt="Front Artwork">
+      </div>
+
+      <!-- BACK SIDE -->
+      <div class="card-face card-back">
+        <img src="back.png" alt="Back Artwork / Message">
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function flipCard(){
+      document.querySelector(".card").classList.toggle("flipped");
+    }
+  </script>
+</body>
+</html>
