@@ -3,7 +3,7 @@ body {
   justify-content:center;
   align-items:center;
   height:100vh;
-  background:#fdf6f0;
+  background:#c1d9de;
   margin:0;
   font-family: Arial, sans-serif;
 }
@@ -21,7 +21,7 @@ body {
   transform-style:preserve-3d;
   transition: transform 1s ease-in-out; /* smooth PPT flip */
   cursor:pointer;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 30px rgba(33, 95, 104);
   border-radius:12px;
 }
 

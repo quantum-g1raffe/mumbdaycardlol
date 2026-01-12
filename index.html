@@ -30,3 +30,67 @@
   </script>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Digital Card</title>
+
+<style>
+
+
+/* 💖 Floating hearts */
+.heart{
+  position:fixed;
+  bottom:-20px;
+  font-size:24px;
+  animation:floatUp linear forwards;
+  pointer-events:none;
+}
+
+@keyframes floatUp{
+  0%{
+    transform:translateY(0) scale(1);
+    opacity:1;
+  }
+  100%{
+    transform:translateY(-110vh) scale(1.5);
+    opacity:0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<script>
+const heartColors=[
+  "#d5ffff", // pastel turq
+  "#338b85", // deeper turq
+  "#a98878", // brown 
+  "#1f4d59"  // submerged teal
+];
+
+function createHeart(){
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="❤";
+
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.fontSize=(16+Math.random()*20)+"px";
+  heart.style.color=heartColors[Math.floor(Math.random()*heartColors.length)];
+  heart.style.animationDuration=(4+Math.random()*4)+"s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(()=>heart.remove(),8000);
+}
+
+/* spawn hearts continuously */
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>
